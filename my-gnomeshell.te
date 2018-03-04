@@ -1,0 +1,19 @@
+
+module my-gnomeshell 1.0;
+
+require {
+	type unconfined_dbusd_t;
+	type system_dbusd_var_lib_t;
+	type xdm_var_lib_t;
+	type xdm_t;
+	class file execute;
+	class process signull;
+	class lnk_file read;
+}
+
+#============= xdm_t ==============
+allow xdm_t system_dbusd_var_lib_t:lnk_file read;
+allow xdm_t unconfined_dbusd_t:process signull;
+
+#!!!! This avc is allowed in the current policy
+allow xdm_t xdm_var_lib_t:file execute;

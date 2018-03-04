@@ -1,0 +1,118 @@
+// Google Fonts (Open Sans)
+@import "../lib/fonts/open-sans/open-sans";
+
+// Material Design Font
+@import "../lib/fonts/material-design/material-icons.css";
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Bootstrap Tour
+@import "./import/plugins/bootstrap-tour/bootstrap-tour";
+
+// Bootstrap Select
+@import "./import/plugins/bootstrap-select/bootstrap-select.min.css";
+
+// Animate
+@import "../lib/plugins/animate/animate";
+
+// Ladda
+@import "../lib/plugins/ladda/ladda-themeless.min.css";
+
+// Flags
+@import "node_modules/flag-icon-css/sass/flag-icon.scss";
+
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@import "../lib/fonts/font-awesome/scss/variables";
+@import "../lib/fonts/font-awesome/scss/mixins";
+@import "../lib/fonts/font-awesome/scss/path";
+@import "../lib/fonts/font-awesome/scss/core";
+@import "../lib/fonts/font-awesome/scss/larger";
+@import "../lib/fonts/font-awesome/scss/fixed-width";
+@import "../lib/fonts/font-awesome/scss/list";
+@import "../lib/fonts/font-awesome/scss/bordered-pulled";
+@import "../lib/fonts/font-awesome/scss/animated";
+@import "../lib/fonts/font-awesome/scss/rotated-flipped";
+@import "../lib/fonts/font-awesome/scss/stacked";
+@import "../lib/fonts/font-awesome/scss/icons";
+@import "../lib/fonts/font-awesome/scss/screen-reader";
+
+/*!
+ *  Socicon
+ */
+@import "../lib/fonts/socicon/socicon";
+
+/*
+ *
+ *   BASE TEMPLATE
+ *
+*/
+// Variables, Mixins
+@import "import/template/variables";
+@import "import/template/mixins";
+
+// BASE TEMPLATE Theme Elements
+@import "import/template/typography";
+@import "import/template/navigation";
+@import "import/template/top_navigation";
+@import "import/template/buttons";
+@import "import/template/badges_labels";
+@import "import/template/elements";
+@import "import/template/sidebar";
+@import "import/template/base";
+@import "import/template/pages";
+@import "import/template/chat";
+@import "import/template/metismenu";
+@import "import/template/spinners";
+@import "import/template/combo-box";
+@import "import/template/class-plugin";
+@import "import/template/forms";
+@import "import/template/workflow";
+
+// Landing page styles
+@import "import/template/landing";
+
+// RTL Support
+@import "import/template/rtl";
+
+// For demo only - config box style
+@import "import/template/theme-config";
+
+// BASE TEMPLATE Skins
+@import "import/template/skins";
+@import "import/template/md-skin";
+
+// Media query style
+@import "import/template/media";
+
+// Custom style
+// Your custom style to override base style
+@import "import/template/custom";
+
+// Data tables style
+@import "import/template/data-tables";
+
+// Icons
+@import "import/template/icons";
+
+// Clear layout on print mode
+@media print {
+  nav.navbar-static-side {
+    display: none;
+  }
+  body { overflow: visible !important; }
+
+  #page-wrapper {
+    margin: 0;
+  }
+}
+
+.dropdown-menu.open {
+  z-index: 999999999999999;
+}

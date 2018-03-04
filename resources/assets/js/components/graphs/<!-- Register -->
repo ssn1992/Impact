@@ -1,0 +1,108 @@
+<!-- Register -->
+loginRequestPopUp () {
+                $("#modal-request-login").appendTo("body").modal('show');
+            },
+            
+payloadRequest: {
+                    name         : {
+                        fieldType: 'text-field',
+                        label : 'Name',
+                        value : 'name',
+                        rules : 'required',
+                        post  : null,
+                    },
+                    email         : {
+                        fieldType: 'text-field',
+                        label : 'Email',
+                        value : 'email',
+                        rules : 'required|email',
+                        post  : null,
+                    },
+                    country         : {
+                        fieldType: 'text-field',
+                        label : 'Country',
+                        value : 'country',
+                        rules : 'required',
+                        post  : [],
+                        data  : []
+                    },
+                    blogMagazine         : {
+                        fieldType: 'text-field',
+                        label : 'Blog | Magazine',
+                        value : 'blogMagazine',
+                        rules : 'required',
+                        post  : null,
+                    },
+                }
+
+
+<!-- Modal Core -->
+        <div class="modal fade" id="modal-request-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="max-width: 500px;">
+                <div class="modal-content">
+                    <div class="modal-body text-center" style="padding-top: 25px;">
+
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                        <div class="text-center" style="padding-bottom: 50px; padding-top: 12px;">
+
+                            <i style="font-size: 80px; display: block;" class="material-icons">&#xE853;
+                                <h5 style="margin-right: 8px;" class="modal-title text-center" id="myModalLabel">LOGIN</h5>
+                            </i>
+                        </div>
+                        <!-- Form -->
+                        <form>
+                            <div class="row form-pop-up">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating" :class="{'has-error': errors.has(payloadRequest.name.value)}">
+                                        <input type="text" v-model="payloadRequest.name.post" :name=payloadRequest.name.value  v-validate :data-vv-rules=payloadRequest.name.rules :data-vv-validate-on="validateForm" class="input form-control" style="margin-top: 10px" placeholder="Enter your Name">
+                                    </div>
+                                    <span v-show="errors.has(payloadRequest.name.value)" class="help-block text-danger text-center">
+                                        <strong>{{ errors.first(payloadRequest.name.value) }}</strong>
+                                    </span>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating" :class="{'has-error': errors.has(payloadRequest.email.value)}">
+                                        <input type="text" v-model="payloadRequest.email.post" :name=payloadRequest.email.value  v-validate :data-vv-rules=payloadRequest.email.rules :data-vv-validate-on="validateForm" class="input form-control" style="margin-top: 10px" placeholder="Enter your Email">
+                                    </div>
+                                    <span v-show="errors.has(payloadRequest.email.value)" class="help-block text-danger text-center">
+                                        <strong>{{ errors.first(payloadRequest.email.value) }}</strong>
+                                    </span>
+                                </div>
+                                <div class="col-md-12 select-area" style="padding-top: 10px">
+                                    <div id="boostrap-select-login" class="form-group label-floating" :class="{'has-error': errors.has(payloadRequest.country.value)}">
+                                        <div :class="{'has-error': errors.has(payloadRequest.country.value)}">
+
+                                            <select data-live-search="false" v-model="payloadRequest.country.post" :name=payloadRequest.country.value  v-validate :data-vv-rules=payloadRequest.country.rules :data-vv-validate-on="validateForm" class="selectpicker" data-style="" title="Choose your Country">
+                                                <option :value="values.value" v-for="values in payloadRequest.country.data">
+
+                                                    <span v-bind:id="values.iso"></span>
+                                                    {{ trans(values.label) }}
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <span v-show="errors.has(payloadRequest.country.value)" class="help-block text-danger text-center">
+                                            <strong>{{ errors.first(payloadRequest.country.value) }}</strong>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating" :class="{'has-error': errors.has(payloadRequest.blogMagazine.value)}">
+                                        <input type="text" v-model="payloadRequest.blogMagazine.post" :name=payloadRequest.blogMagazine.value  v-validate :data-vv-rules=payloadRequest.blogMagazine.rules :data-vv-validate-on="validateForm" class="input form-control" style="margin-top: 10px" placeholder="Blog | Magazine">
+                                    </div>
+                                    <span v-show="errors.has(payloadRequest.blogMagazine.value)" class="help-block text-danger text-center">
+                                        <strong>{{ errors.first(payloadRequest.blogMagazine.value) }}</strong>
+                                    </span>
+                                </div>
+
+                                <div class="text-center col-md-12" style="padding-top: 50px;">
+                                    <button @click="validateBeforeSubmit()" type="button" class="btn btn-default btn-simple">Request Access</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- .Form -->
+                    </div>
+                </div>
+            </div>
+        </div>

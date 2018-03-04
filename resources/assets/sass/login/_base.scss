@@ -1,0 +1,446 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0;padding:0;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+.underline{	padding-bottom:5px;	border-bottom: 1px solid #eee; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+/*--header start here--*/
+body{
+	font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	font-weight: 700;
+}
+@-webkit-keyframes autofill {
+    to {
+        color: #fff;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+.login-form{
+	height: 0;
+	padding:100px 0 50px 0;
+	position: relative;
+}
+.login-form h1{
+	font-size: 1.65em;
+	color:#fff;
+	font-weight:800;
+	text-transform:uppercase;
+	text-align:center;
+	margin-bottom:2em;
+	margin-top: 0;
+}
+.top-login {
+	width: 480px;
+	margin: 0 auto;
+	position: relative;
+}
+/*----*/
+
+.login-top{
+	width: 460px;
+	display: block;
+	margin: 0 auto;
+}
+.login-ic {
+	background: rgba(255, 255, 255, 0.32);
+	margin-bottom:1.5em;
+	padding: 8px;
+}
+.login-ic i {
+	background: url(../lib/images/login/icon-user.png)no-repeat 6px 6px;
+	width: 38px;
+	height: 38px;
+	float: left;
+	/*-- agileits --*/
+	display: inline-block;
+}
+.login-ic i.icon {
+	background: url(../lib/images/login/icon-password.png)no-repeat 6px 6px;
+}
+.login-ic input[type="text"],.login-ic  input[type="password"] {
+	float: left;
+	background: none;
+	outline: none;
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	padding: 10px 16px;
+	border: none;
+	border-left: 1px solid #fff;
+	width: 82%;
+	display: inline-block;
+	margin-left: 7px;
+}
+.log-bwn {
+	text-align: center;
+}
+.log-bwn input[type="submit"] {
+	font-size: 15px;
+	font-weight: 700;
+	color: #fff;
+	padding: 13px 0;
+	background: #2fbab7;
+	display: inline-block;
+	width: 100%;
+	outline:none;
+	border:2px solid #2fbab7;
+	cursor:pointer;
+	text-transform:uppercase;
+}
+.log-bwn input[type="submit"]:hover{
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	border:2px solid #fff;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:    #fff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:    #fff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color:    #fff;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+	color:    #fff;
+}
+/*-- profile_2 --*/
+p.copy{
+	color:#fff;
+	font-weight: 700;
+	font-size: 1.2em;
+	text-align:center;
+	margin-top:6em;
+}
+/*-- w3layouts --*/
+p.copy a{
+	color:#fff;
+	text-decoration:underline;
+}
+p.copy a:hover{
+	text-decoration:none;
+}
+.error_login {
+	color: #F44336;
+	text-align: center;
+	margin-top: 1.5em;
+	font-size: 14px;
+	padding-top: 30px;
+}
+#forgot-password {
+	float: right;
+	font-size: 14px;
+	padding-top: 5px;
+
+	span {
+		color: #fff;
+	}
+}
+.checkbox {
+	float: left;
+
+	label {
+		font-size: 14px;
+		color: white;
+	}
+
+	.styled-input-single {
+		position: relative;
+		padding: 5px 0 20px 15px;
+		text-align: left;
+
+		label {
+			font-size: 14px;
+			cursor: pointer;
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				border-radius: 50%;
+			}
+			&:before {
+				left: 0;
+				width: 11px;
+				height: 11px;
+				margin: -12px 0 0;
+				background: #f7f7f7;
+				box-shadow: 0 0 1px grey;
+			}
+			&:after {
+				left: 1px;
+				width: 9px;
+				height: 9px;
+				margin: -11px 0 0;
+				opacity: 0;
+				background: #37b2b2;
+			}
+		}
+
+		input[type="radio"],
+		input[type="checkbox"] {
+			position: absolute;
+			top: 0;
+			left: -9999px;
+			visibility: hidden;
+
+			&:checked + label {
+				&:before {
+				}
+				&:after {
+					transform: translate3d(0, 0, 0);
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.styled-input--square {
+		label {
+			&:before,
+			&:after {
+				border-radius: 0;
+			}
+		}
+	}
+
+	.styled-input--rounded {
+		label {
+			&:before {
+				border-radius: 10px;
+			}
+			&:after {
+				border-radius: 6px;
+			}
+		}
+	}
+
+	.styled-input--diamond {
+		.styled-input-single {
+			padding-left: 45px;
+		}
+		label {
+			&:before,
+			&:after {
+				border-radius: 0;
+			}
+			&:before {
+				transform: rotate(45deg);
+			}
+		}
+
+		input[type="radio"],
+		input[type="checkbox"] {
+
+			&:checked + label {
+				&:after {
+					transform: rotate(45deg);
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	////////////////////////////////////////
+	// GLOBAL SETUP
+	////////////////////////////////////////
+	$wrapper-max-width: 400px;
+	$mb-breakpoint: 600px;
+	$breakpoint: 860px;
+	$large-breakpoint: 1100px;
+	$xl-breakpoint: 1920px;
+
+	body {
+		font-family: sans-serif;
+		max-width: $wrapper-max-width;
+		margin: 0 auto;
+		padding: 30px;
+		font-family: 'Maven Pro', sans-serif;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 2.8rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	h1,h2 {
+		font-family: 'Yrsa', cursive;
+	}
+
+	p {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+	}
+
+	hr {
+		margin: 40px auto;
+		max-width: 100px;
+		display: block;
+		height: 1px;
+		border: 0;
+		border-top: 1px solid #ccc;
+		padding: 0;
+	}
+
+	.pen-intro {
+		text-align: center;
+	}
+
+	%clearfix {
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+
+	.two-column {
+		@extend %clearfix;
+		margin: 0 0 40px;
+		@media(min-width: $breakpoint) {
+			display: flex;
+		}
+
+		.single-col {
+			margin: 0 0 40px;
+			@media(min-width: $breakpoint) {
+				width: 47.5%;
+				float: left;
+				margin: 0 0 0 5%;
+				&:nth-child(2n+1) {
+					clear: both;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+/*--media queries start here--*/
+@media (max-width:1024px){
+	p.copy {
+		margin-top: 3.5em;
+	}
+	.login-form {
+		padding: 60px 0 40px 0;
+	}
+}
+
+@media (max-width:768px){
+	body {
+		min-height: 929px;
+	}
+}
+@media (max-width:480px){
+	p.copy {
+		font-size: 1em;
+		padding:0 0.5em;
+		line-height: 1.8em;
+	}
+}
+@media (max-width:450px){
+	.login-top {
+		width: 360px;
+	}
+	.login-ic input[type="text"], .login-ic input[type="password"] {
+		width: 76%;
+	}
+	.login-form h1 {
+		margin-bottom: 1.28em;
+		font-size: 1.27em;
+	}
+
+	.top-login {
+		width: 372px;
+	}
+
+	p.copy {
+
+		margin-top: 3em;
+	}
+	.login-form {
+		padding: 80px 0 45px 0;
+	}
+	.login-ic {
+		margin-bottom: 1em;
+		padding: 3px;
+	}
+	.log-bwn input[type="submit"] {
+		padding: 10px 0;
+	}
+	p.copy {
+		font-size: 1em;
+	}
+	body {
+		min-height: 672px;
+	}
+}
+@media (max-width:384px){
+	.login-top {
+		width: 340px;
+	}
+	.login-ic input[type="text"], .login-ic input[type="password"] {
+		width: 75%;
+	}
+    .top-login {
+        width: 360px;
+    }
+    .login-form h1 {
+		font-size: 1.24em;
+    }
+	body {
+		min-height: 600px;
+	}
+}
+@media(max-width:320px){
+	.login-top {
+		width: 280px;
+	}
+	.login-ic input[type="text"], .login-ic input[type="password"] {
+		width: 70%;
+	}
+    .top-login {
+        width: 295px;
+    }
+	.login-form {
+		padding: 50px 0 45px 0;
+	}
+    .login-form h1 {
+		font-size: 1em;
+    }
+	body {
+		min-height: 540px;
+	}
+}
+/*--media queries end here--*/
